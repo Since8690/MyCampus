@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="app_bg">#377EB4</color>
+    <color name="wihte">#ffffff</color>
+
+    <color name="head_icon_bg">#E5E5E5</color>
+    <color name="divider">#44000000</color>
+    <color name="fresh_man_title_bg">#dd39D38C</color>
+
+    <color name="black">#000000</color>
+
+    <color name="text_black">#222222</color>
+</resources>
