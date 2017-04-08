@@ -18,11 +18,21 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".guide.ActivityGuide">
+        <activity android:name=".guide.GuideActivity">
         </activity>
         <activity android:name=".offer.OfferActivity">
         </activity>
         <activity android:name=".offer.OfferWebViewActivity">
+        </activity>
+        <activity android:name=".guide.GuideXuexiaojianjie">
+        </activity>
+        <activity android:name=".guide.GuideXiaozhangzhici">
+        </activity>
+        <activity android:name=".guide.GuideLishiyange">
+        </activity>
+        <activity android:name=".guide.GuideXinshengzhinan">
+        </activity>
+        <activity android:name=".news.NewsActivity">
         </activity>
     </application>
 

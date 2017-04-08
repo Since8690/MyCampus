@@ -179,7 +179,7 @@
                                     style="@style/white_text"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="校园新闻"/>
+                                    android:text="他乡故知"/>
                             </LinearLayout>
                         </android.support.v7.widget.CardView>
                     </LinearLayout>

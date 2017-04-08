@@ -1,12 +1,9 @@
-package com.example.since.mycampus.offer;
+package com.example.since.mycampus.guide;
 
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
-import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
 
 import com.example.since.mycampus.R;
@@ -17,31 +14,20 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class OfferActivity extends AppCompatActivity implements Runnable
+public class GuideXuexiaojianjie extends AppCompatActivity implements Runnable
 {
-    private List<OfferItem> offerItemList = new ArrayList<>();  //用于存放爬取的招聘信息
-
-    private String url = "http://cug.91wllm.com/teachin/index?page=1";       //指定开始爬取的url
-
+    private TextView textViewXuexiaojianjie;
+    private String xuexiaojianjie;
+    private String url = "http://www.cug.edu.cn/new/001/002.html";
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_offer);
+        setContentView(R.layout.activity_guide_xuexiaojianjie);
+        textViewXuexiaojianjie = (TextView)findViewById(R.id.tv_guidexuexiaojianjie);
 
-        new Thread(OfferActivity.this).start();
-    }
-
-    private void myFunciton()
-    {
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recycler_offer);
-        StaggeredGridLayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(layoutManager);
-        OfferAdapter adapter = new OfferAdapter(OfferActivity.this ,offerItemList);
-        recyclerView.setAdapter(adapter);
+        new Thread(GuideXuexiaojianjie.this).start();
     }
 
     @Override
@@ -50,16 +36,18 @@ public class OfferActivity extends AppCompatActivity implements Runnable
         try
         {
             Document doc = Jsoup.connect(url).get();
-            Elements elements = doc.getElementsByClass("list-group-item");
+            Elements elements = doc.getElementsByClass("content_wz");
             for (Element element : elements)
             {
+                /*
                 String companyName = element.getElementsByTag("h2").text(); //公司名字
                 String time = element.getElementsByClass("text-default").first().text();                    //宣讲会时间
                 String address = element.getElementsByClass("text-default").last().text();  //宣讲会具体地址
                 String href = element.select("a[href]").attr("abs:href");       //公司招聘链接
+                */
+                xuexiaojianjie = element.text();
+                String things = element.html();
 
-                OfferItem offerItem = new OfferItem(companyName, address, time, href);
-                offerItemList.add(offerItem);
             }
 
             handler.sendEmptyMessage(0);
@@ -68,14 +56,16 @@ public class OfferActivity extends AppCompatActivity implements Runnable
         {
             e.printStackTrace();
         }
+
     }
+
     Handler handler = new Handler()
     {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
             // 当收到消息时就会执行这个方法
-            myFunciton();
+            textViewXuexiaojianjie.setText(xuexiaojianjie);
         }
     };
 }

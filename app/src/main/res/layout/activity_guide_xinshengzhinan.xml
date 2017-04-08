@@ -5,28 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.since.mycampus.offer.OfferWebViewActivity">
+    tools:context="com.example.since.mycampus.guide.GuideXinshengzhinan">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@color/app_bg"
-        android:elevation="4dp"
         android:gravity="center">
 
         <TextView
             style="@style/white_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="招聘详情"
-            android:transitionName="news_title" />
+            android:text="新生指南"/>
 
     </LinearLayout>
 
-    <WebView
-        android:id="@+id/offer_webview"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    </WebView>
+        <!--新生指南-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/app_bg" />
+
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

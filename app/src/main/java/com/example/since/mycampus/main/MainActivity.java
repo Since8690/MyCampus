@@ -15,6 +15,8 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.since.mycampus.R;
+import com.example.since.mycampus.guide.GuideActivity;
+import com.example.since.mycampus.news.NewsActivity;
 import com.example.since.mycampus.offer.OfferActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
@@ -94,11 +96,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (v.getId())
         {
             case R.id.card_news:
-                Toast.makeText(getApplicationContext(),"You clicked News",Toast.LENGTH_SHORT).show();
+                Intent intentNews = new Intent(MainActivity.this, NewsActivity.class);
+                startActivity(intentNews);
                 break;
             case R.id.card_offer:
-                Intent intent = new Intent(MainActivity.this, OfferActivity.class);
-                startActivity(intent);
+                Intent intentOffer = new Intent(MainActivity.this, OfferActivity.class);
+                startActivity(intentOffer);
+                break;
+            case R.id.card_guide:
+                Intent intentGuide = new Intent(MainActivity.this, GuideActivity.class);
+                startActivity(intentGuide);
         }
 
     }

@@ -1,8 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/app_bg"
+        android:elevation="4dp"
+        android:gravity="center">
+
+        <TextView
+            style="@style/white_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="招生就业"
+            android:transitionName="news_title" />
+
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_offer"
