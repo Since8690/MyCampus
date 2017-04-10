@@ -133,7 +133,7 @@
                             style="@style/white_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="历史沿革"
+                            android:text="地大事迹"
                             android:transitionName="news_title"/>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>

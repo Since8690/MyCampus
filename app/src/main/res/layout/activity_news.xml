@@ -19,7 +19,7 @@
             style="@style/white_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="招生就业"
+            android:text="地大要闻"
             android:transitionName="admissions_title" />
 
     </LinearLayout>

@@ -1,10 +1,12 @@
 package com.example.since.mycampus.news;
 
+import java.io.Serializable;
+
 /**
  * Created by Since on 2017/4/8.
  */
 
-public class NewsItem
+public class NewsItem implements Serializable
 {
     private String title;
     private String href;

@@ -28,11 +28,15 @@
         </activity>
         <activity android:name=".guide.GuideXiaozhangzhici">
         </activity>
-        <activity android:name=".guide.GuideLishiyange">
+        <activity android:name=".guide.GuideDidashijiActivity">
         </activity>
         <activity android:name=".guide.GuideXinshengzhinan">
         </activity>
         <activity android:name=".news.NewsActivity">
+        </activity>
+        <activity android:name=".news.NewsWebViewActivity">
+        </activity>
+        <activity android:name=".guide.GuideShijiWebView">
         </activity>
     </application>
 

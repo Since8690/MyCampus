@@ -21,31 +21,11 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <WebView
+        android:id="@+id/guide_wv_zhichi"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <!--校长致辞-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
 
-            <View
-                android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:layout_marginTop="4dp"
-                android:background="@color/app_bg" />
-
-            <TextView
-                android:id="@+id/tv_xiaozhangzhici"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
-                android:textSize="16sp" />
-
-        </LinearLayout>
-    </ScrollView>
+    </WebView>
 
 </LinearLayout>
